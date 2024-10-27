@@ -154,12 +154,36 @@
                         <div class="header__cart">
                             <ul>
                                 <div class="header__top__right__auth">
-                                    <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                                    <li>
+                                        <a href="./cart.php">
+                                            <i class="fa fa-shopping-bag"></i>
+                                            <span>
+                                                <?php
+                                                $cart = [];
+                                                if (isset($_SESSION['cart'])) {
+                                                    $cart = $_SESSION['cart'];
+                                                }
+                                                // print_r($cart);exit;
+                                                $count = 0;  //hien thi so luong san pham trong gio hang
+                                                $tongtien = 0;
+                                                foreach ($cart as $item) {
+                                                    $count += $item['qty'];
+                                                    $tongtien += $item['qty'] * $item['disscounted_price'];
+                                                }
+                                                //hien thi so luong
+                                                echo $count;
+                                                ?>
+                                            </span>
+                                        </a>
+                                    </li>
                                     <li><a href="#"><i class="fa fa-user"></i> Login</a></li>
                                 </div>
                                 <!-- <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li> -->
                                 <!-- <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li> -->
                             </ul>
+                            <div class="header__cart__price">Tổng tiền:
+                                <span><?= number_format($tongtien, 0, '', '.') . " VNĐ" ?></span>
+                            </div>
                             <!-- <div class="header__cart__price">item: <span>$150.00</span></div> -->
                             <!-- <div class="header__top__right__auth">
                                 <a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a>

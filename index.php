@@ -1,5 +1,5 @@
 <?php
-// session_start();
+session_start();
 $is_homepage = true;
 require_once('header.php');
 ?>
