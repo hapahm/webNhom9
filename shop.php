@@ -10,10 +10,10 @@ require_once('header.php');
         <div class="row">
             <div class="col-lg-12 text-center">
                 <div class="breadcrumb__text">
-                    <h2>Organi Shop</h2>
+                    <h2>Ogani Shop</h2>
                     <div class="breadcrumb__option">
-                        <a href="./index.php">Home</a>
-                        <span>Shop</span>
+                        <a href="./index.php">Trang chủ</a>
+                        <span>Sản phẩm</span>
                     </div>
                 </div>
             </div>
@@ -31,7 +31,7 @@ require_once('header.php');
         <div class="row">
             <div class="col-lg-3 col-md-5">
                 <div class="sidebar">
-                    <div class="sidebar__item">
+                    <!-- <div class="sidebar__item">
                         <h4>Danh mục sản phẩm</h4>
                         <ul>
                             <?php
@@ -40,11 +40,11 @@ require_once('header.php');
                             $result = mysqli_query($conn, $sql_str);
                             while ($row = mysqli_fetch_assoc($result)) {
                                 ?>
-                                <li><a href="#"><?= $row['name'] ?></a></li>
+                                <li><a><?= $row['name'] ?></a></li>
                             <?php } ?>
                         </ul>
-                    </div>
-                    <div class="sidebar__item">
+                    </div> -->
+                    <!-- <div class="sidebar__item">
                         <h4>Price</h4>
                         <div class="price-range-wrap">
                             <div class="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
@@ -60,9 +60,9 @@ require_once('header.php');
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div class="sidebar__item sidebar__item__color--option">
+                    <!-- <div class="sidebar__item sidebar__item__color--option">
                         <h4>Colors</h4>
                         <div class="sidebar__item__color sidebar__item__color--white">
                             <label for="white">
@@ -94,11 +94,11 @@ require_once('header.php');
                             </label>
                         </div>
 
-                    </div>
+                    </div> -->
 
                     <div class="sidebar__item">
                         <div class="latest-product__text">
-                            <h4>Sản phẩm mới nhất</h4>
+                            <h4>Sản phẩm mới</h4>
                             <!-- nhiều hàng -->
                             <div class="latest-product__slider owl-carousel">
                                 <!-- có 3 sản phẩm của cột -->
@@ -178,11 +178,11 @@ require_once('header.php');
                                         <div class="product__discount__item__pic set-bg"
                                             data-setbg="<?= "quantri/" . $anh_arr[0] ?>">
                                             <div class="product__discount__percent">-<?= $row['discount'] ?>%</div>
-                                            <ul class="product__item__pic__hover">
+                                            <!-- <ul class="product__item__pic__hover">
                                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
                                                 <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                            </ul>
+                                            </ul> -->
                                         </div>
                                         <div class="product__discount__item__text">
                                             <span><?= $row['cname'] ?></span>
@@ -206,13 +206,13 @@ require_once('header.php');
                 <div class="filter__item">
                     <div class="row">
                         <div class="col-lg-4 col-md-5">
-                            <div class="filter__sort">
+                            <!-- <div class="filter__sort">
                                 <span>Sort By</span>
                                 <select>
                                     <option value="0">Default</option>
                                     <option value="0">Default</option>
                                 </select>
-                            </div>
+                            </div> -->
                         </div>
 
                         <?php
@@ -228,10 +228,10 @@ require_once('header.php');
                         </div>
 
                         <div class="col-lg-4 col-md-3">
-                            <div class="filter__option">
+                            <!-- <div class="filter__option">
                                 <span class="icon_grid-2x2"></span>
                                 <span class="icon_ul"></span>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -244,11 +244,11 @@ require_once('header.php');
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">
                                 <div class="product__item__pic set-bg" data-setbg="<?= "quantri/" . $anh_arr[0] ?>">
-                                    <ul class="product__item__pic__hover">
+                                    <!-- <ul class="product__item__pic__hover">
                                         <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                         <li><a href="#"><i class="fa fa-retweet"></i></a></li>
                                         <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                                 <div class="product__item__text">
                                     <h6><a href="sanpham.php?id=<?= $row['id'] ?>"><?= $row['name'] ?></a></h6>
@@ -264,12 +264,12 @@ require_once('header.php');
 
                     <?php } ?>
                 </div>
-                <div class="product__pagination">
+                <!-- <div class="product__pagination">
                     <a href="#">1</a>
                     <a href="#">2</a>
                     <a href="#">3</a>
                     <a href="#"><i class="fa fa-long-arrow-right"></i></a>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

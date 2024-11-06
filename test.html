@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phần Mềm Quản Lý Sách</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        h2 {
+            color: #5e005e;
+        }
+
+        .button {
+            background-color: #5e005e;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 20px;
+        }
+
+        .button:hover {
+            background-color: #4b004b;
+        }
+
+        .search-container {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            width: 300px;
+            margin-right: 10px;
+        }
+
+        .table-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #5e005e;
+            color: white;
+        }
+
+        .pagination {
+            margin: 20px 0;
+        }
+
+        .pagination button {
+            background-color: #5e005e;
+            color: white;
+            padding: 8px 16px;
+            margin: 2px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .pagination button:hover {
+            background-color: #4b004b;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Phần Mềm Quản Lý Sách</h2>
+
+    <button class="button">Thêm Sách</button>
+
+    <div class="search-container">
+        <input type="text" placeholder="Tìm kiếm theo Tên Sách hoặc Tác Giả">
+        <button class="button">Tìm Kiếm</button>
+    </div>
+
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>Mã Sách</th>
+                <th>Tên Sách</th>
+                <th>Thể Loại</th>
+                <th>Tác Giả</th>
+                <th>Nhà Xuất Bản</th>
+                <th>Năm Xuất Bản</th>
+                <th>Số Lượng</th>
+                <th>Trạng Thái</th>
+                <th>Giá Bán</th>
+                <th>Chức Năng</th>
+            </tr>
+
+
+
+            <tr>
+                <td>1</td>
+                <td>AAAAA</td>
+                <td>AAAAA</td>
+                <td>AAAAA</td>
+                <td>AAAAA</td>
+                <td>2022</td>
+                <td>222222</td>
+                <td>Hết hàng</td>
+                <td>1000000</td>
+                <td><a href="#">Sửa</a> | <a href="#">Xóa</a></td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>BBBBBB</td>
+                <td>BBBBBB</td>
+                <td>BBBBBB</td>
+                <td>BBBBBB</td>
+                <td>2024</td>
+                <td>33333</td>
+                <td>Còn hàng</td>
+                <td>1000000</td>
+                <td><a href="#">Sửa</a> | <a href="#">Xóa</a></td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>CCCCCC</td>
+                <td>CCCCCC</td>
+                <td>CCCCCC</td>
+                <td>CCCCCC</td>
+                <td>2023</td>
+                <td>2222</td>
+                <td>Còn hàng</td>
+                <td>1000000</td>
+                <td><a href="#">Sửa</a> | <a href="#">Xóa</a></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>DDDDDD</td>
+                <td>DDDDDD</td>
+                <td>DDDDDD</td>
+                <td>DDDDDD</td>
+                <td>2024</td>
+                <td>1000</td>
+                <td>Hết hàng</td>
+                <td>1000000</td>
+                <td><a href="#">Sửa</a> | <a href="#">Xóa</a></td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>TÊN SÁCH ĐÃ SỬA</td>
+                <td>HÀAAAAA</td>
+                <td>HÀAAAAA</td>
+                <td>HÀAAAAA</td>
+                <td>2024</td>
+                <td>100</td>
+                <td>Còn hàng</td>
+                <td>240000</td>
+                <td><a href="#">Sửa</a> | <a href="#">Xóa</a></td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="pagination">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+    </div>
+
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm Sách</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            width: 400px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .submit-button {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .warning {
+            color: red;
+            font-size: 12px;
+            margin-bottom: 15px;
+
+            /* Hide initially; can show it conditionally using JavaScript */
+        }
+
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h2>Thêm Sách</h2>
+        <form action="#">
+            <div class="warning">Giá trị không hợp lệ</div>
+            <label for="ten-sach">Tên Sách:</label>
+            <input type="text" id="ten-sach" name="ten-sach" value="TÊN SÁCH ĐÃ SỬA">
+
+            <label for="the-loai">Thể Loại:</label>
+            <input type="text" id="the-loai" name="the-loai" value="HÀAAAAA">
+
+            <label for="tac-gia">Tác Giả:</label>
+            <input type="text" id="tac-gia" name="tac-gia" value="HÀAAAAA">
+
+            <label for="nxb">Nhà Xuất Bản:</label>
+            <input type="text" id="nxb" name="nxb" value="HÀAAAAA">
+
+            <label for="nam-xuat-ban">Năm Xuất Bản:</label>
+            <input type="text" id="nam-xuat-ban" name="nam-xuat-ban" value="2024">
+
+            <label for="so-luong">Số Lượng:</label>
+            <input type="text" id="so-luong" name="so-luong" value="100">
+
+            <label for="gia-ban">Giá Bán:</label>
+            <input type="text" id="gia-ban" name="gia-ban" value="240000">
+
+            <button type="submit" class="submit-button">Thêm Sách</button>
+        </form>
+    </div>
+
+</body>
+
+</html> -->

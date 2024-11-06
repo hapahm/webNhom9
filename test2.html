@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome.css"> <!-- Font Awesome CSS link -->
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <!-- Cột hero__categories rộng 3/12 -->
+            <div class="col-lg-3">
+                <div class="hero__categories">
+                    <div class="hero__categories__all">
+                        <i class="fa fa-bars"></i>
+                        <span>Danh mục sản phẩm</span>
+                    </div>
+                    <ul>
+                        <?php
+                        $sql_str = "select * from categories order by name";
+                        $result = mysqli_query($conn, $sql_str);
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            ?>
+                        <li><a href="#">
+                                <?= $row['name'] ?>
+                            </a></li>
+                        <?php } ?>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Cột hero__search__form và header__cart rộng 9/12 -->
+            <div class="col-lg-9">
+                <!-- Hàng đầu tiên chứa hero__search__form và header__cart -->
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="hero__search__form">
+                            <form action="timkiem.php" method="get">
+                                <select name="danhmuc">
+                                    <option value='*'>Tất cả danh mục</option>
+                                    <?php
+                                    require('./db/conn.php');
+                                    $sql_str = "select * from categories order by name";
+                                    $result = mysqli_query($conn, $sql_str);
+                                    while ($row = mysqli_fetch_assoc($result)){
+                                    ?>
+                                    <option value="<?= $row['id'] ?>">
+                                        <?= $row['name'] ?>
+                                    </option>
+                                    <?php } ?>
+                                </select>
+                                <input type="text" name="tukhoa" placeholder="Bạn cần tìm gì?">
+                                <button type="submit" class="site-btn">Tìm</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="header__cart">
+                            <div class="header__cart__price">Tổng tiền: <span>
+                                    <?= number_format($tongtien, 0, '', '.') . " VNĐ" ?>
+                                </span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hàng thứ hai chứa hero__item nếu là trang chủ -->
+                <div class="row">
+                    <?php if ($is_homepage) { ?>
+                    <div class="hero__item set-bg" data-setbg="img/hero/banner.jpg">
+                        <div class="hero__text">
+                            <span>FRUIT FRESH</span>
+                            <h2>Vegetable <br />100% Organic</h2>
+                            <p>Free Pickup and Delivery Available</p>
+                            <a href="#" class="primary-btn">SHOP NOW</a>
+                        </div>
+                    </div>
+                    <?php } ?>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

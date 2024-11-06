@@ -16,7 +16,7 @@ require_once('header.php');
                 <div class="breadcrumb__text">
                     <h2>Giỏ hàng</h2>
                     <div class="breadcrumb__option">
-                        <a href="./index.html">Home</a>
+                        <a href="./index.php">Trang chủ</a>
                         <span>Giỏ hàng</span>
                     </div>
                 </div>
@@ -35,9 +35,9 @@ require_once('header.php');
             <div class="row">
                 <div class="col-lg-12 col-md-12">
                     <div class="checkout__order">
-                        <h4>Your Order</h4>
+                        <h4>Đơn hàng của bạn</h4>
                         <div class="checkout__order__products">
-                            Products <span>Total</span>
+                            Sản phẩm
                         </div>
                         <table class="table">
                             <tr>
@@ -75,6 +75,8 @@ require_once('header.php');
                                         <td>
                                             <a href='./deletecart.php?id=<?= $item['id'] ?>' class="btn btn-danger">Xóa</a>
                                         </td>
+
+
                                     </tr>
                                 </form>
 

@@ -117,7 +117,7 @@
         <div id="collapseFour" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Các chức năng:</h6>
-                <a class="collapse-item" href="">.</a>
+                <a class="collapse-item" href="./listorders.php">Danh sách đơn hàng</a>
                 <a class="collapse-item" href="">.</a>
             </div>
         </div>
@@ -133,8 +133,8 @@
         <div id="collapseFive" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Các chức năng:</h6>
-                <a class="collapse-item" href="">.</a>
-                <a class="collapse-item" href="">.</a>
+                <a class="collapse-item" href="./listusers.php">Danh sách người dùng</a>
+                <a class="collapse-item" href="./themuser.php">Thêm người dùng</a>
             </div>
         </div>
     </li>
@@ -190,14 +190,7 @@
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
     </div>
 
-    <!-- Sidebar Message -->
-    <div class="sidebar-card d-none d-lg-flex">
-        <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
-        <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components,
-            and more!</p>
-        <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to
-            Pro!</a>
-    </div>
+
 
 </ul>
 <!-- End of Sidebar -->
